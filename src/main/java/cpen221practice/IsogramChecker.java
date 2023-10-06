@@ -3,8 +3,17 @@ package cpen221practice;
 class IsogramChecker {
 
     boolean isIsogram(String phrase) {
-        System.out.println("HHHHH");
-        throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+
+        char[] phraseArray = phrase.toCharArray();
+        boolean isIsogram;
+        for(int i = 0; i < phrase.length(); i++){
+            String s = phrase.substring(i);
+            if(s.indexOf(phraseArray[i]) != -1){
+                return false;
+            }
+
+        }
+        return true;
     }
 
 }
